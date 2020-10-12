@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>login</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style type="text/css">
+            body{
+                margin: 0;
+                padding: 0;
+            }
+            .main_form{
+                margin-top: 8%;
+                text-align: center;
+            }
+            .pass{
+                padding-right: 13px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="main_form">
+        <h1 style="margin-left: -65px;">欢迎登陆！</h1>
+        <form action="/login/" method="POST">
+            <p>
+                <label for="user">用户名</label>
+                <input id="user" type="text" name="username">
+            </p>
+            <p>
+                <label for="passwd" class="pass">密码</label>
+                <input id="passwd" type="password" name="pwd">
+            </p>
+            <input type="submit" style="margin-left: -180px;" value="确定">
+            <span style="color: red">{{ error_msg }}</span>
+        </form>
+        </div>
+    </body>
+</html>
